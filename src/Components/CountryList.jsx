@@ -1,16 +1,21 @@
+// components/CountryList.js
+import React from 'react';
 import Country from './Country';
 
-const CountryList = ({ countries, markAsVisited }) => {
+const CountryList = ({ countries, markAsVisited, selectCountry }) => {
   return (
-    <div>
+    <div className="country-list">
       <h2>Countries</h2>
-      {countries.map(country => ( 
-        <Country 
-          key={country.cca3} 
-          country={country} 
-          markAsVisited={markAsVisited} 
-        />
-      ))}
+      <div className="country-list-scrollable">
+        {countries.map(country => (
+          <Country 
+            key={country.cca3} 
+            country={country} 
+            markAsVisited={markAsVisited} 
+            selectCountry={selectCountry}
+          />
+        ))}
+      </div>
     </div>
   );
 };

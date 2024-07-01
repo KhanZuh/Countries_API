@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import CountryContainer from './Containers/CountryContainer'; 
+import './App.css';  
 
 
 function App() {
